@@ -11,7 +11,9 @@ module.exports = () => {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
-      install: './src/js/install.js'
+      install: './src/js/install.js',
+      editor: './src/js/editor.js',
+      header: './src/js/header.js'
     },
     output: {
       filename: '[name].bundle.js',
@@ -38,6 +40,7 @@ module.exports = () => {
         theme_color: '#225ca3',
         start_url: './',
         publicPath: './',
+        display: 'standalone',
         icons: [
           {
             src: path.resolve("./src/images/logo.png"),
