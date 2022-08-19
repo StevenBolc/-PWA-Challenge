@@ -29,9 +29,15 @@ module.exports = () => {
       }),
 
       new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
         short_name: "JATE",
         name: "Just Another Text Editor",
         description: "just another text editor",
+        background_color: '#225ca3',
+        theme_color: '#225ca3',
+        start_url: './',
+        publicPath: './',
         icons: [
           {
             src: path.resolve("./src/images/logo.png"),
