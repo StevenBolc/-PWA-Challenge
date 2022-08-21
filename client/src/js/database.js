@@ -32,11 +32,11 @@ const jateDb = await openDB('jate', 1);
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
 
-const jatedbDb = await openDB('jatedb', 1);
+const jateDb = await openDB('jate', 1);
 
-const tx = jatedbDb.transaction('jatedb', 'readonly');
+const tx = jateDb.transaction('jate', 'readonly');
 
-const store = tx.objectStore('jatedb');
+const store = tx.objectStore('jate');
 
 const request = store.getAll();
 
